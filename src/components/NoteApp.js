@@ -75,7 +75,7 @@ class NoteApp extends React.Component {
 	}
 
   render() {
-		const searchTerm = this.state.keyword;
+		const searchTerm = this.state.keyword.toLowerCase();
 		const validNotes = this.state.notes.filter((note) => {
 			if (searchTerm === "") {
 				return note;
