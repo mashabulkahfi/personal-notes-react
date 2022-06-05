@@ -16,10 +16,10 @@ function NoteList({ notes, onDelete, onArchive, active }) {
     });
     titleButton = 'Pindahkan'
   }
- return (
-   <div className="notes-list">
-     { validNote.length > 0 ?
-       validNote.map((note) => (
+  if (validNote.length > 0) {
+    return (
+      <div className="notes-list">
+        { validNote.map((note) => (
          <NoteItem 
           key={note.id} 
           id={note.id}
@@ -27,11 +27,13 @@ function NoteList({ notes, onDelete, onArchive, active }) {
           onArchive={onArchive}
           titleButton={titleButton}
           {...note} />
-       ))
-       : <p className="notes-list__empty-message">Tidak ada catatan</p>
-     }
-   </div>
- );
+       ))}
+      </div>
+    )
+  }
+  return (
+    <p className="notes-list__empty-message">Tidak ada catatan</p>
+  );
 }
  
 export default NoteList;

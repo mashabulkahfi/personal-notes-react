@@ -15,7 +15,7 @@ class NoteSearch extends React.Component {
 		this.setState({
 			keywordSearch: event.target.value,
 		});
-		this.props.filterNote({ keywordSearch: event.target.value.toLowerCase() });
+		this.props.searchKeyword({ keywordSearch: event.target.value.toLowerCase() });
 	}
 
 	render() {

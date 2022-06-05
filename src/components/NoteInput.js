@@ -44,7 +44,6 @@ class NoteInput extends React.Component {
 
   onSubmitEventHandler(event) {
     event.preventDefault();
-    console.log(this.state);
     this.props.addNote(this.state);
   }
 
