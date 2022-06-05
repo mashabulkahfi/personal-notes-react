@@ -88,7 +88,7 @@ class NoteApp extends React.Component {
         <div className="note-app__header">
 					<h1>Notes</h1>
 					<div className="note-search">
-						<NoteSearch keywordSearch={this.state.keyword} searchKeyword={this.onKeywordAddHandler}/>
+						<NoteSearch keywordSearch={this.state.keyword} addKeyword={this.onKeywordAddHandler}/>
 					</div>
 				</div>
         <div className="note-app__body">
